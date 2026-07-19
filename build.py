@@ -436,6 +436,7 @@ def build_trip_page(t):
 """ + footer(depth=1)
 
     out_path = os.path.join(ROOT, "trips", f"{t['slug']}.html")
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
     with open(out_path, "w") as f:
         f.write(html)
     print("wrote trips/" + t["slug"] + ".html")
