@@ -1,0 +1,79 @@
+{
+  "trips": [
+    {
+      "slug": "moss-park",
+      "name": "Moss Park",
+      "date_iso": "2025-12-19",
+      "date_display": "Dec 19, 2025",
+      "eyebrow": "Group Trip \u00b7 December 19, 2025",
+      "card_teaser": "A great county campground with shade and sun, fun amenities, and stunning views of Kennedy Space Center. What better time to decorate a campsite than the holidays?",
+      "intro": "A great county campground with shade and sun, fun amenities, and stunning views of Kennedy Space Center. What better time to decorate a campsite than the holidays?",
+      "body_paragraphs": [
+        "Many people have expressed a joy in camping over the holidays \u2014 when else can you decorate your campsite? But the season can make it hard to get away. Moss Park solves that: a great escape that's still close to home.",
+        "Moss Park sits between Lake Mary Jane and Lake Hart, about 20 minutes from Orlando International Airport. Expect shaded, spacious sites, a swimming beach, boat ramps for fishing and paddling, hiking trails, and regular visits from deer and sandhill cranes.",
+        "As always, you'll need to book your own site directly through the park. Once you've got your reservation, let us know which site you picked so we can add you to the group camping map \u2014 that's how the rest of the group finds you once you're there."
+      ],
+      "facts": [
+        ["Location", "12901 Moss Park Rd, Orlando, FL"],
+        ["Dates", "Dec 19, 2025"],
+        ["Sites", "54 sites \u00b7 water &amp; electric"],
+        ["Amenities", "Swim beach, boat ramp, trails, pavilions"],
+        ["Admission", "$3&ndash;$5 per vehicle"]
+      ],
+      "reserve_label": "Reserve your site",
+      "reserve_url": "https://orangecountyfl.net/CultureParks/CampingEnvironmentEducation/tabid/1209/Default.aspx",
+      "note": "Reservations go through Orange County Parks &amp; Recreation, not through our group. Book your own site, then share your site number with the group.",
+      "photo": null
+    },
+    {
+      "slug": "wickham-park",
+      "name": "Wickham Park",
+      "date_iso": "2026-03-27",
+      "date_display": "Mar 27, 2026",
+      "eyebrow": "Group Trip \u00b7 March 27, 2026",
+      "card_teaser": "A large campground with lots going on \u2014 an arts &amp; crafts fair, hiking trails, disc golf, and only 15 minutes from the beach. The hardest part is deciding what to do first.",
+      "intro": "A large campground with lots going on \u2014 an arts &amp; crafts fair, hiking trails, disc golf, and only 15 minutes from the beach. The hardest part is deciding what to do first.",
+      "body_paragraphs": [
+        "Sometimes you want the beach, other times you want a festival \u2014 why not both? Wickham Park puts you close to Melbourne's beaches while the park itself keeps you busy with its own art and crafts fair, hiking trails, and disc golf course.",
+        "This 391-acre Brevard County park offers full-hookup campsites, fishing lakes, an archery range, and a dog park, all on flat, easy terrain that's simple to navigate with the whole family.",
+        "You'll book your own site directly with Brevard County, then let us know which site you picked so we can add you to the group camping map."
+      ],
+      "facts": [
+        ["Location", "2500 Parkway Dr, Melbourne, FL"],
+        ["Dates", "Mar 27, 2026"],
+        ["Sites", "133 full hookup sites"],
+        ["Amenities", "Disc golf, archery, fishing lakes, dog park"],
+        ["Beach", "~15 min to the Atlantic coast"]
+      ],
+      "reserve_label": "Reserve your site",
+      "reserve_url": "https://www.brevardfl.gov/ParksAndRecreation/Campgrounds/WickhamCampground",
+      "note": "Reservations go through Brevard County Parks &amp; Recreation, not through our group. Book your own site, then share your site number with the group.",
+      "photo": null
+    },
+    {
+      "slug": "jetty-park",
+      "name": "Jetty Park",
+      "date_iso": "2026-05-01",
+      "date_display": "May 1, 2026",
+      "eyebrow": "Group Trip \u00b7 May 1, 2026 \u00b7 Beach Baptism Weekend",
+      "card_teaser": "Beach Baptism weekend, now a full weekend at the beach with cruise ship views. Air-conditioned cabins are still available \u2014 but this one books out fast.",
+      "intro": "Beach Baptism weekend doesn't have to just be a day. Enjoy a full weekend at the beach with views of the cruise ships. There are even still cabins available, complete with beds and AC!",
+      "body_paragraphs": [
+        "Jetty Park is a wildly popular campground right on the beach in Port Canaveral \u2014 a perfect place to enjoy the sand, fish off the pier, surf some waves, and watch the cruise ships head out.",
+        "This is our biggest group trip of the year, timed around Beach Baptism weekend. Jetty Park does book out far in advance, so if you want to join us, don't wait too long to reserve your spot.",
+        "Book through the link below, then let us know which site or cabin you picked so we can add you to the group camping map."
+      ],
+      "facts": [
+        ["Location", "Port Canaveral, FL"],
+        ["Dates", "May 1, 2026"],
+        ["Sites", "Beachfront sites &amp; A/C cabins"],
+        ["Good for", "Fishing, surfing, cruise-ship watching"],
+        ["Book early", "This one books out fast"]
+      ],
+      "reserve_label": "Book your spot",
+      "reserve_url": "https://genesis-camping.square.site/shop/camping-at-jetty-park-512026/QT3SNTDA7LQMVIZI7SPTU5EA",
+      "note": "Booked through our group's Square page. Once you've reserved, let us know your site or cabin number so we can add you to the group camping map.",
+      "photo": null
+    }
+  ]
+}
