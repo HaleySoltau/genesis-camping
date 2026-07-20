@@ -196,6 +196,7 @@ section{padding:88px 0;}
 .trip{position:relative; padding-left:64px; margin-bottom:44px;}
 @media(min-width:760px){
   .trip{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; padding-left:0;}
+  .trip-card, .trip-date{grid-row:1;}
   .trip:nth-child(even) .trip-card{grid-column:2;}
   .trip:nth-child(even) .trip-date{grid-column:1; text-align:right;}
   .trip:nth-child(odd) .trip-card{grid-column:1;}
