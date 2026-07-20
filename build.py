@@ -417,8 +417,6 @@ def build_trip_page(t):
             for i in range(len(t["gallery"]))
         )
         gallery_section = f"""
-<section>
-  <div class="wrap">
     <div class="gallery-carousel" id="gallery-{t['slug']}">
       <div class="gallery-track">
         {slides}
@@ -429,8 +427,6 @@ def build_trip_page(t):
         {dots}
       </div>
     </div>
-  </div>
-</section>
 <script>
 function galleryGo(id, idx) {{
   const el = document.getElementById('gallery-' + id);
@@ -470,13 +466,13 @@ function galleryStep(id, dir) {{
     </div>
   </div>
 </header>
-{gallery_section}
 <section>
   <div class="wrap detail-grid">
     <div class="detail-copy">
       <p class="eyebrow" style="margin-bottom:10px;">Trip details</p>
       <h2 style="margin-bottom:18px;">What to expect</h2>
       {paras}
+      {gallery_section}
     </div>
     <div class="fact-card">
       <h3>At a glance</h3>
