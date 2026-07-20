@@ -166,8 +166,17 @@ footer a:hover{color:var(--blue-deep);}
 .fact-list .v{text-align:right; font-weight:500;}
 .note-box{background:var(--blue-pale); border:1px solid rgba(43,195,247,0.35); border-radius:3px; padding:18px 20px; font-size:0.9rem; color:var(--ink); margin-top:22px;}
 
-.gallery-strip{display:flex; gap:12px; overflow-x:auto; margin:28px 0 8px; padding-bottom:10px; scroll-snap-type:x proximity; -webkit-overflow-scrolling:touch;}
-.gallery-strip img{flex:0 0 auto; height:200px; width:auto; max-width:80vw; object-fit:cover; border-radius:3px; display:block; scroll-snap-align:start;}
+.gallery-carousel{position:relative; margin:28px 0 8px; border-radius:3px; overflow:hidden; background:var(--paper-2); aspect-ratio:16/9;}
+.gallery-track{position:relative; width:100%; height:100%;}
+.gallery-slide{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0; transition:opacity 0.35s ease; display:block;}
+.gallery-slide.active{opacity:1;}
+.gallery-arrow{position:absolute; top:50%; transform:translateY(-50%); width:36px; height:36px; border-radius:50%; border:none; background:rgba(255,255,255,0.85); color:var(--ink); font-size:1.3rem; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center;}
+.gallery-arrow:hover{background:#fff;}
+.gallery-prev{left:12px;}
+.gallery-next{right:12px;}
+.gallery-dots{position:absolute; bottom:12px; left:0; right:0; display:flex; gap:6px; justify-content:center;}
+.gallery-dots button{width:8px; height:8px; border-radius:50%; border:none; background:rgba(255,255,255,0.6); cursor:pointer; padding:0;}
+.gallery-dots button.active{background:#fff;}
 
 @media(max-width:760px){
   .about-grid{grid-template-columns:1fr;}
@@ -399,16 +408,45 @@ def build_trip_page(t):
     else:
         media = f'<div class="photo-slot">PHOTO: {t["name"]}</div>'
     if t.get("gallery"):
-        gallery_section = """
+        slides = "\n        ".join(
+            f'<img class="gallery-slide{" active" if i == 0 else ""}" src="../{g["src"]}" alt="{g["alt"]}" loading="lazy">'
+            for i, g in enumerate(t["gallery"])
+        )
+        dots = "\n        ".join(
+            f'<button class="{"active" if i == 0 else ""}" onclick="galleryGo(\'{t["slug"]}\', {i})" aria-label="Photo {i + 1}"></button>'
+            for i in range(len(t["gallery"]))
+        )
+        gallery_section = f"""
 <section>
   <div class="wrap">
-    <div class="gallery-strip">
-      """ + "\n      ".join(
-            f'<img src="../{g["src"]}" alt="{g["alt"]}" loading="lazy">' for g in t["gallery"]
-        ) + """
+    <div class="gallery-carousel" id="gallery-{t['slug']}">
+      <div class="gallery-track">
+        {slides}
+      </div>
+      <button class="gallery-arrow gallery-prev" onclick="galleryStep('{t['slug']}', -1)" aria-label="Previous photo">&lsaquo;</button>
+      <button class="gallery-arrow gallery-next" onclick="galleryStep('{t['slug']}', 1)" aria-label="Next photo">&rsaquo;</button>
+      <div class="gallery-dots">
+        {dots}
+      </div>
     </div>
   </div>
 </section>
+<script>
+function galleryGo(id, idx) {{
+  const el = document.getElementById('gallery-' + id);
+  const slides = el.querySelectorAll('.gallery-slide');
+  const dots = el.querySelectorAll('.gallery-dots button');
+  slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+  dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+}}
+function galleryStep(id, dir) {{
+  const el = document.getElementById('gallery-' + id);
+  const slides = el.querySelectorAll('.gallery-slide');
+  let idx = [...slides].findIndex(s => s.classList.contains('active'));
+  idx = (idx + dir + slides.length) % slides.length;
+  galleryGo(id, idx);
+}}
+</script>
 """
     else:
         gallery_section = ""
