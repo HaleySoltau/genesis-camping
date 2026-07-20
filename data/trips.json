@@ -72,9 +72,9 @@
         ["Tents", "Dome tents only — high winds have taken down rigid frames"],
         ["Book early", "This one books out fast"]
       ],
-      "reserve_label": "Book your spot",
-      "reserve_url": "https://genesis-camping.square.site/shop/camping-at-jetty-park-512026/QT3SNTDA7LQMVIZI7SPTU5EA",
-      "note": "Booked through our group's Square page. Once you've reserved, let us know your site or cabin number so we can add you to the group camping map.",
+      "reserve_label": "Reserve your site",
+      "reserve_url": "https://www.camplife.com/campground/Jetty+Park",
+      "note": "Reservations go through Jetty Park directly, not through our group. Book your own site or cabin, then share your site or cabin number with the group.",
       "photo": "assets/images/trips/jetty-park.jpg",
       "gallery": [
         {"src": "assets/images/trips/jetty-park-aerial.jpg", "alt": "Aerial view of the Jetty Park campground and marina"},
@@ -105,9 +105,9 @@
         ["Tents", "Dome tents only — high winds have taken down rigid frames"],
         ["Book early", "This one books out fast"]
       ],
-      "reserve_label": "Book your spot",
-      "reserve_url": "https://genesis-camping.square.site/shop/camping-at-jetty-park-512026/QT3SNTDA7LQMVIZI7SPTU5EA",
-      "note": "Booked through our group's Square page. Once you've reserved, let us know your site or cabin number so we can add you to the group camping map.",
+      "reserve_label": "Reserve your site",
+      "reserve_url": "https://www.camplife.com/campground/Jetty+Park",
+      "note": "Reservations go through Jetty Park directly, not through our group. Book your own site or cabin, then share your site or cabin number with the group.",
       "photo": "assets/images/trips/jetty-park.jpg",
       "gallery": [
         {"src": "assets/images/trips/jetty-park-aerial.jpg", "alt": "Aerial view of the Jetty Park campground and marina"},
@@ -139,7 +139,14 @@
       "reserve_label": "Reserve your site",
       "reserve_url": "https://reserve.floridastateparks.org/Web/#!park/39",
       "note": "Reservations go through Florida State Parks, not through our group. Book your own site, then share your site number with the group.",
-      "photo": null
+      "photo": "assets/images/trips/lake-louisa.jpg",
+      "gallery": [
+        {"src": "assets/images/trips/lake-louisa-trail.jpg", "alt": "A shaded trail through the pines at Lake Louisa State Park"},
+        {"src": "assets/images/trips/lake-louisa-sunset.jpg", "alt": "Sunset over the lily pads at Lake Louisa"},
+        {"src": "assets/images/trips/lake-louisa-beach.jpg", "alt": "The swim beach at Lake Louisa State Park"},
+        {"src": "assets/images/trips/lake-louisa-campsite.jpg", "alt": "Sunset view from a cabin porch overlooking the lake"},
+        {"src": "assets/images/trips/lake-louisa-glamping.jpg", "alt": "A glamping bell tent set up at Lake Louisa"}
+      ]
     }
   ]
 }
