@@ -15,6 +15,7 @@ Photos: drop an image at assets/images/trips/<slug>.jpg and set
 """
 import json
 import os
+import urllib.parse
 from datetime import date
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -29,6 +30,19 @@ TODAY = date.today()
 def trip_date(t):
     y, m, d = (int(x) for x in t["date_iso"].split("-"))
     return date(y, m, d)
+
+# "Share your site number" form: Campground + Trip Date come in pre-filled
+# per trip (via these entry IDs) so nobody has to maintain a dropdown of
+# campgrounds/dates in the form itself as trips come and go.
+SITE_NUMBER_FORM_BASE = "https://docs.google.com/forms/d/e/1FAIpQLScO-IwJJcCW-6ps4arHLOlv9MJyRjvOB0EC6-eQ6Uaz7QHNUA/viewform"
+
+def site_number_form_url(t):
+    params = {
+        "usp": "pp_url",
+        "entry.1522615614": t["name"],
+        "entry.823380835": t["date_iso"],
+    }
+    return SITE_NUMBER_FORM_BASE + "?" + urllib.parse.urlencode(params, quote_via=urllib.parse.quote_plus)
 
 # Trips still on the calendar, soonest first. A trip "falls off" the
 # homepage timeline automatically once its date has passed — no manual
@@ -461,7 +475,7 @@ function galleryStep(id, dir) {{
       <p class="lede">{t['intro']}</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="{t['reserve_url']}">{t['reserve_label']}</a>
-        <a class="btn btn-ghost" href="../index.html#individual">Share your site number</a>
+        <a class="btn btn-ghost" href="{site_number_form_url(t)}">Share your site number</a>
       </div>
     </div>
   </div>
