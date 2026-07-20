@@ -13,10 +13,14 @@ Run this after editing data/trips.json, then commit + push.
 Photos: drop an image at assets/images/trips/<slug>.jpg and set
 "photo": "assets/images/trips/<slug>.jpg" in trips.json for that trip.
 """
+import csv
+import io
 import json
 import os
 import urllib.parse
-from datetime import date
+import urllib.request
+from datetime import date, datetime
+from html import escape as html_escape
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -52,6 +56,76 @@ UPCOMING_TRIPS = sorted(
     (t for t in TRIPS if trip_date(t) >= TODAY),
     key=trip_date,
 )
+
+# "Share your own trip" responses, pulled live from the linked Google Sheet
+# on every build. The submitting form has no login, so every field here is
+# untrusted public input - it gets HTML-escaped before being rendered below.
+INDIVIDUAL_TRIPS_CSV_URL = "https://docs.google.com/spreadsheets/d/1AS-QO554uUNs0MNcYXWyQE1-muq9F9xF5eXTsO2fYbk/export?format=csv"
+
+def fetch_individual_trips():
+    try:
+        with urllib.request.urlopen(INDIVIDUAL_TRIPS_CSV_URL, timeout=15) as resp:
+            text = resp.read().decode("utf-8")
+    except Exception as e:
+        print(f"Warning: couldn't fetch individual trips sheet, skipping ({e})")
+        return []
+
+    trips = []
+    for raw_row in csv.DictReader(io.StringIO(text)):
+        row = {(k or "").strip(): (v or "").strip() for k, v in raw_row.items()}
+        try:
+            end_date = datetime.strptime(row["Trip End Date"], "%m/%d/%Y").date()
+        except (KeyError, ValueError):
+            continue
+        if end_date < TODAY:
+            continue
+        try:
+            start_date = datetime.strptime(row["Trip Start Date"], "%m/%d/%Y").date()
+        except (KeyError, ValueError):
+            start_date = end_date
+        website = row.get("Campground Website", "")
+        if not website.lower().startswith(("http://", "https://")):
+            website = ""
+        trips.append({
+            "name": row.get("Name", ""),
+            "campground": row.get("Campground Name", "") or "A campground",
+            "website": website,
+            "start": start_date,
+            "end": end_date,
+            "site": row.get("Site Number Booked", ""),
+            "description": row.get("Campground & Activities Description", ""),
+        })
+    trips.sort(key=lambda x: x["start"])
+    return trips
+
+def format_date_range(start, end):
+    if start == end:
+        return start.strftime("%b %-d, %Y")
+    if start.year == end.year and start.month == end.month:
+        return f"{start.strftime('%b %-d')}–{end.strftime('%-d, %Y')}"
+    if start.year == end.year:
+        return f"{start.strftime('%b %-d')}–{end.strftime('%b %-d, %Y')}"
+    return f"{start.strftime('%b %-d, %Y')}–{end.strftime('%b %-d, %Y')}"
+
+def individual_trip_card_html(trip):
+    dates = format_date_range(trip["start"], trip["end"])
+    campground = html_escape(trip["campground"])
+    if trip["website"]:
+        heading = f'<a href="{html_escape(trip["website"])}" target="_blank" rel="noopener noreferrer">{campground}</a>'
+    else:
+        heading = campground
+    desc = html_escape(trip["description"]).replace("\n\n", "</p><p>").replace("\n", "<br>")
+    desc_html = f"<p>{desc}</p>" if trip["description"] else ""
+    host = html_escape(trip["name"]) if trip["name"] else "A member"
+    site = html_escape(trip["site"])
+    site_html = f" &middot; Site {site}" if site else ""
+    return f"""
+      <div class="ind-card">
+        <p class="eyebrow">Hosted by {host}</p>
+        <h3>{heading}</h3>
+        <p class="member-trip-dates">{dates}{site_html}</p>
+        {desc_html}
+      </div>"""
 
 STYLE = """
 :root{
@@ -148,6 +222,8 @@ section{padding:88px 0;}
 .ind-card h3{color:var(--paper); font-size:1.2rem; margin-top:10px;}
 .ind-card p{color:rgba(255,255,255,0.62); font-size:0.94rem; margin:12px 0 18px;}
 .ind-card a.btn{padding:11px 20px;}
+.ind-card h3 a{color:inherit; text-decoration:underline; text-decoration-color:rgba(255,255,255,0.3);}
+.member-trip-dates{font-family:'JetBrains Mono', monospace; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--blue) !important; margin:10px 0 !important;}
 
 .issue-featured{background:var(--paper-2); border:1px solid var(--line); border-radius:3px; padding:36px; margin-bottom:36px;}
 .issue-featured h3{font-size:1.6rem; margin-top:10px;}
@@ -306,6 +382,15 @@ def build_index():
       <div style="padding:40px 0; color:var(--ink-soft); font-family:'JetBrains Mono', monospace; font-size:0.9rem;">
         Nothing on the calendar yet &mdash; check back soon, or suggest a trip below.
       </div>"""
+
+    individual_trips = fetch_individual_trips()
+    if individual_trips:
+        member_trip_cards = "\n".join(individual_trip_card_html(t) for t in individual_trips)
+    else:
+        member_trip_cards = """
+      <div style="padding:20px 0; color:rgba(255,255,255,0.5); font-family:'JetBrains Mono', monospace; font-size:0.85rem;">
+        Nothing shared yet &mdash; be the first to share your own trip below.
+      </div>"""
     html = head("Genesis Family Camping") + nav() + f"""
 <header class="hero" id="top">
   <div class="hero-media">
@@ -367,12 +452,6 @@ def build_index():
     </div>
     <div class="ind-grid">
       <div class="ind-card">
-        <p class="eyebrow">Browse</p>
-        <h3>Upcoming individual trips</h3>
-        <p>See what fellow campers already have booked, and find out how to join them.</p>
-        <a class="btn btn-primary" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3CcSuv5lb9NlyxqQLfoCaz0OwNPtjZW8VwN6ZPobMOcGuw6vDpksIfjVOZIMbCPS77aehIfUQEnmm/pubhtml?gid=744332280&single=true" target="_blank" rel="noopener noreferrer">View trips</a>
-      </div>
-      <div class="ind-card">
         <p class="eyebrow">Contribute</p>
         <h3>Share your own trip</h3>
         <p>Got a trip booked already? Let the group know so others can tag along or send well-wishes.</p>
@@ -384,6 +463,13 @@ def build_index():
         <p>Found a hidden-gem campground or a great day trip idea? Your recommendations shape what we plan next.</p>
         <a class="btn btn-primary" href="https://forms.gle/m2KCsUUN74c58sTM6" target="_blank" rel="noopener noreferrer">Submit an idea</a>
       </div>
+    </div>
+    <div class="section-head" style="margin-top:56px; margin-bottom:28px;">
+      <p class="eyebrow" style="color:var(--blue);">Browse</p>
+      <h2>Upcoming member trips</h2>
+    </div>
+    <div class="ind-grid">
+      {member_trip_cards}
     </div>
   </div>
 </section>
