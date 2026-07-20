@@ -231,6 +231,7 @@ def nav(depth=0):
       <li><a href="{prefix}index.html#trips">Group Trips</a></li>
       <li><a href="{prefix}index.html#individual">Individual Trips</a></li>
       <li><a href="{prefix}index.html#chronicles">Campfire Chronicles</a></li>
+      <li><a href="https://genesis-camping.square.site/" target="_blank" rel="noopener noreferrer">Merch</a></li>
       <li><a href="{prefix}index.html#links">Links</a></li>
     </ul>
   </div>
