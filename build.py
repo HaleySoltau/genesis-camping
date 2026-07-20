@@ -525,6 +525,12 @@ function galleryStep(id, dir) {{
         f'<li><span class="k">{k}</span><span class="v">{v}</span></li>' for k, v in t["facts"]
     )
     badge = f'<span class="event-badge">&starf; {t["special_event"]}</span>' if t.get("special_event") else ""
+    # Most trips are group campsites, so the second hero button defaults to
+    # "share your site number" (pre-filled per trip). A few trips (e.g. an
+    # expo with a separate dinner meetup, no shared campsite) override this
+    # with their own secondary_label/secondary_url instead.
+    secondary_label = t.get("secondary_label", "Share your site number")
+    secondary_url = t.get("secondary_url") or site_number_form_url(t)
     html = head(f"{t['name']} — Genesis Family Camping", depth=1) + nav(depth=1) + f"""
 <header class="hero">
   <div class="trip-hero-media">
@@ -537,7 +543,7 @@ function galleryStep(id, dir) {{
       <p class="lede">{t['intro']}</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="{t['reserve_url']}" target="_blank" rel="noopener noreferrer">{t['reserve_label']}</a>
-        <a class="btn btn-ghost" href="{site_number_form_url(t)}" target="_blank" rel="noopener noreferrer">Share your site number</a>
+        <a class="btn btn-ghost" href="{secondary_url}" target="_blank" rel="noopener noreferrer">{secondary_label}</a>
       </div>
     </div>
   </div>

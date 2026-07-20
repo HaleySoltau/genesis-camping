@@ -155,6 +155,35 @@
         {"src": "assets/images/trips/lake-louisa-campsite.jpg", "alt": "Sunset view from a cabin porch overlooking the lake"},
         {"src": "assets/images/trips/lake-louisa-glamping.jpg", "alt": "A glamping bell tent set up at Lake Louisa"}
       ]
+    },
+    {
+      "slug": "rv-supershow-2027",
+      "name": "Florida RV SuperShow",
+      "date_iso": "2027-01-15",
+      "date_display": "Jan 15–17, 2027",
+      "eyebrow": "Group Trip · January 15–17, 2027",
+      "special_event": "Group Dinner Meetup — Sat, 6:30pm",
+      "card_teaser": "North America's largest RV show rolls into Tampa for its 41st year. We won't all be camping together for this one, but however you're attending, join us Saturday night for dinner.",
+      "intro": "North America's largest RV show rolls into Tampa for its 41st year — 1.5 million square feet of new models, parts, and accessories. We won't all be camping together for this one, but however you're attending, join us Saturday night for dinner.",
+      "body_paragraphs": [
+        "The Florida RV SuperShow is the premier RV event in the region, running January 15–17, 2027 at the Florida State Fairgrounds in Tampa. As North America's largest RV show, it spans 1.5 million square feet with hundreds of new models, parts, and accessories on display.",
+        "This one's a little different — a lot of our members have talked about going, so we're turning it into a group weekend even though we won't all be camping together. Because the show is so big, campgrounds nearby fill up fast (many are already sold out), so whether you camp, book a hotel, or just make it a day trip is entirely up to you.",
+        "However you're attending, join us Saturday, January 16th at 6:30pm for dinner at Portillo's in Brandon — a quick-service spot known for hot dogs, Italian beef, cheese fries, and milkshakes, with plenty of room for a crowd.",
+        "Sign up below so we know how many to expect at dinner."
+      ],
+      "facts": [
+        ["Location", "Florida State Fairgrounds, Tampa, FL"],
+        ["Dates", "Jan 15–17, 2027"],
+        ["Dinner meetup", "Sat, Jan 16 @ 6:30pm &middot; Portillo's, Brandon"],
+        ["Camping", "Book early — sites nearby fill up fast"],
+        ["Show size", "1.5M sq ft &middot; North America's largest RV show"]
+      ],
+      "reserve_label": "Sign Up for Dinner",
+      "reserve_url": "https://docs.google.com/forms/d/e/1FAIpQLSfC3TIoFEXSuDBOeP8VROjc60sUhIkLlX7l4g6Pc5LF5FGEkA/viewform",
+      "note": "This one isn't a shared group campsite — camp, book a hotel, or make it a day trip, whatever works for you. Sign up so we know how many to expect at Portillo's Saturday night.",
+      "secondary_label": "RV Show Info",
+      "secondary_url": "https://www.facebook.com/events/1378783476810932/1378783496810930/?active_tab=about",
+      "photo": null
     }
   ]
 }
