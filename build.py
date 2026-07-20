@@ -166,6 +166,9 @@ footer a:hover{color:var(--blue-deep);}
 .fact-list .v{text-align:right; font-weight:500;}
 .note-box{background:var(--blue-pale); border:1px solid rgba(43,195,247,0.35); border-radius:3px; padding:18px 20px; font-size:0.9rem; color:var(--ink); margin-top:22px;}
 
+.gallery-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin:28px 0 8px;}
+.gallery-grid img{width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;}
+
 @media(max-width:760px){
   .about-grid{grid-template-columns:1fr;}
   .footer-grid{grid-template-columns:1fr; gap:32px;}
@@ -395,6 +398,20 @@ def build_trip_page(t):
         media = f'<img class="photo" src="../{t["photo"]}" alt="{t["name"]}" style="position:absolute; inset:0;">'
     else:
         media = f'<div class="photo-slot">PHOTO: {t["name"]}</div>'
+    if t.get("gallery"):
+        gallery_section = """
+<section>
+  <div class="wrap">
+    <div class="gallery-grid">
+      """ + "\n      ".join(
+            f'<img src="../{g["src"]}" alt="{g["alt"]}" loading="lazy">' for g in t["gallery"]
+        ) + """
+    </div>
+  </div>
+</section>
+"""
+    else:
+        gallery_section = ""
     paras = "\n      ".join(f"<p>{p}</p>" for p in t["body_paragraphs"])
     fact_rows = "\n        ".join(
         f'<li><span class="k">{k}</span><span class="v">{v}</span></li>' for k, v in t["facts"]
@@ -415,7 +432,7 @@ def build_trip_page(t):
     </div>
   </div>
 </header>
-
+{gallery_section}
 <section>
   <div class="wrap detail-grid">
     <div class="detail-copy">

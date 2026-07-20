@@ -75,7 +75,13 @@
       "reserve_label": "Book your spot",
       "reserve_url": "https://genesis-camping.square.site/shop/camping-at-jetty-park-512026/QT3SNTDA7LQMVIZI7SPTU5EA",
       "note": "Booked through our group's Square page. Once you've reserved, let us know your site or cabin number so we can add you to the group camping map.",
-      "photo": null
+      "photo": "assets/images/trips/jetty-park.jpg",
+      "gallery": [
+        {"src": "assets/images/trips/jetty-park-aerial.jpg", "alt": "Aerial view of the Jetty Park campground and marina"},
+        {"src": "assets/images/trips/jetty-park-beach.jpg", "alt": "Jetty Park beach with a cruise ship passing in the background"},
+        {"src": "assets/images/trips/jetty-park-cabin.jpg", "alt": "One of the air-conditioned cabins at Jetty Park"},
+        {"src": "assets/images/trips/jetty-park-sites.jpg", "alt": "Standard RV campsites at Jetty Park"}
+      ]
     },
     {
       "slug": "jetty-park-2027",
@@ -102,7 +108,13 @@
       "reserve_label": "Book your spot",
       "reserve_url": "https://genesis-camping.square.site/shop/camping-at-jetty-park-512026/QT3SNTDA7LQMVIZI7SPTU5EA",
       "note": "Booked through our group's Square page. Once you've reserved, let us know your site or cabin number so we can add you to the group camping map.",
-      "photo": null
+      "photo": "assets/images/trips/jetty-park.jpg",
+      "gallery": [
+        {"src": "assets/images/trips/jetty-park-aerial.jpg", "alt": "Aerial view of the Jetty Park campground and marina"},
+        {"src": "assets/images/trips/jetty-park-beach.jpg", "alt": "Jetty Park beach with a cruise ship passing in the background"},
+        {"src": "assets/images/trips/jetty-park-cabin.jpg", "alt": "One of the air-conditioned cabins at Jetty Park"},
+        {"src": "assets/images/trips/jetty-park-sites.jpg", "alt": "Standard RV campsites at Jetty Park"}
+      ]
     },
     {
       "slug": "lake-louisa",
