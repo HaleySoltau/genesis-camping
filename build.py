@@ -166,8 +166,8 @@ footer a:hover{color:var(--blue-deep);}
 .fact-list .v{text-align:right; font-weight:500;}
 .note-box{background:var(--blue-pale); border:1px solid rgba(43,195,247,0.35); border-radius:3px; padding:18px 20px; font-size:0.9rem; color:var(--ink); margin-top:22px;}
 
-.gallery-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin:28px 0 8px;}
-.gallery-grid img{width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:3px; display:block;}
+.gallery-strip{display:flex; gap:12px; overflow-x:auto; margin:28px 0 8px; padding-bottom:10px; scroll-snap-type:x proximity; -webkit-overflow-scrolling:touch;}
+.gallery-strip img{flex:0 0 auto; height:200px; width:auto; max-width:80vw; object-fit:cover; border-radius:3px; display:block; scroll-snap-align:start;}
 
 @media(max-width:760px){
   .about-grid{grid-template-columns:1fr;}
@@ -402,7 +402,7 @@ def build_trip_page(t):
         gallery_section = """
 <section>
   <div class="wrap">
-    <div class="gallery-grid">
+    <div class="gallery-strip">
       """ + "\n      ".join(
             f'<img src="../{g["src"]}" alt="{g["alt"]}" loading="lazy">' for g in t["gallery"]
         ) + """
