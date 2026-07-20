@@ -66,16 +66,16 @@ nav{position:sticky; top:0; z-index:50; background:rgba(255,255,255,0.92); backd
 .nav-links a:hover{border-color:var(--blue); color:var(--ink);}
 
 .hero{position:relative; overflow:hidden;}
-.hero-media{position:relative; height:78vh; min-height:460px; max-height:720px; background:linear-gradient(160deg, var(--ink) 0%, #2a2a2a 100%);}
+.hero-media{position:relative; display:flex; flex-direction:column; justify-content:flex-end; min-height:78vh; background:linear-gradient(160deg, var(--ink) 0%, #2a2a2a 100%);}
 .hero-media .photo-slot{position:absolute; inset:0;}
 .hero-media::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.55) 100%);}
-.hero-copy{position:absolute; left:0; right:0; bottom:0; z-index:2; padding:56px 28px; max-width:1080px; margin:0 auto;}
+.hero-copy{position:relative; z-index:2; padding:56px 28px; max-width:1080px; margin:0 auto; width:100%;}
 .hero-copy .eyebrow{color:var(--blue);}
 .hero-copy h1{color:#fff; font-size:clamp(2.4rem, 5.6vw, 4rem); line-height:1.02; max-width:760px; margin-top:12px;}
 .hero-copy p.lede{color:rgba(255,255,255,0.82); max-width:520px; margin-top:18px; font-size:1.05rem;}
 .hero-cta{display:flex; gap:14px; margin-top:30px; flex-wrap:wrap;}
 
-.trip-hero-media{position:relative; height:52vh; min-height:340px; max-height:520px; background:linear-gradient(160deg, var(--ink) 0%, #2a2a2a 100%);}
+.trip-hero-media{position:relative; display:flex; flex-direction:column; justify-content:flex-end; min-height:52vh; background:linear-gradient(160deg, var(--ink) 0%, #2a2a2a 100%);}
 .trip-hero-media .photo-slot{position:absolute; inset:0;}
 .trip-hero-media::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 100%);}
 .crumb{position:absolute; top:24px; left:0; right:0; z-index:3;}
