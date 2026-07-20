@@ -225,14 +225,6 @@ section{padding:88px 0;}
 .ind-card h3 a{color:inherit; text-decoration:underline; text-decoration-color:rgba(255,255,255,0.3);}
 .member-trip-dates{font-family:'JetBrains Mono', monospace; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.04em; color:var(--blue) !important; margin:10px 0 !important;}
 
-.issue-featured{background:var(--paper-2); border:1px solid var(--line); border-radius:3px; padding:36px; margin-bottom:36px;}
-.issue-featured h3{font-size:1.6rem; margin-top:10px;}
-.issue-featured p{color:var(--ink); margin-top:14px; max-width:640px;}
-.issue-list{list-style:none; margin:0; padding:0; border-top:1px solid var(--line);}
-.issue-list li{display:flex; justify-content:space-between; align-items:baseline; padding:16px 0; border-bottom:1px solid var(--line); gap:16px; flex-wrap:wrap;}
-.issue-list .issue-name{font-family:'Fraunces', serif; font-size:1.05rem;}
-.issue-list .issue-tag{font-family:'JetBrains Mono', monospace; font-size:0.72rem; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.06em;}
-
 footer{background:var(--paper-2); color:var(--ink); padding:64px 0 40px; border-top:1px solid var(--line);}
 .footer-top{display:flex; align-items:center; gap:12px; margin-bottom:36px;}
 .footer-top img{height:30px; width:auto;}
@@ -306,7 +298,6 @@ def nav(depth=0):
       <li><a href="{prefix}index.html#hosts">About</a></li>
       <li><a href="{prefix}index.html#trips">Group Trips</a></li>
       <li><a href="{prefix}index.html#individual">Individual Trips</a></li>
-      <li><a href="{prefix}index.html#chronicles">Campfire Chronicles</a></li>
       <li><a href="https://genesis-camping.square.site/" target="_blank" rel="noopener noreferrer">Merch</a></li>
       <li><a href="{prefix}index.html#links">Links</a></li>
     </ul>
@@ -341,7 +332,6 @@ def footer(depth=0):
         <ul>
           <li><a href="https://genesis-camping.square.site/" target="_blank" rel="noopener noreferrer">Book a Trip (Shop)</a></li>
           <li><a href="{prefix}index.html#trips">Group Trips</a></li>
-          <li><a href="{prefix}index.html#chronicles">Campfire Chronicles</a></li>
         </ul>
       </div>
     </div>
@@ -471,29 +461,6 @@ def build_index():
     <div class="ind-grid">
       {member_trip_cards}
     </div>
-  </div>
-</section>
-
-<section class="chronicles" id="chronicles">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">The newsletter</p>
-      <h2>Campfire Chronicles</h2>
-      <p>The monthly update on where we're headed next and what the group's been up to.</p>
-    </div>
-
-    <div class="issue-featured">
-      <p class="eyebrow">Latest issue &middot; November 2025</p>
-      <h3>We are back!!!</h3>
-      <p>Between flooded campgrounds, mission trips, and an epidemic of gallbladder removals&hellip; we're officially back, kicking things off with two new trips and a third in the works: Moss Park in December, Wickham Park in March, and Jetty Park returning in May.</p>
-    </div>
-
-    <ul class="issue-list">
-      <li><span class="issue-name">October 2025</span><span class="issue-tag">Manatee Hammock &mdash; cancelled (flooding)</span></li>
-      <li><span class="issue-name">August 2025</span><span class="issue-tag">Manatee Hammock trip announced</span></li>
-      <li><span class="issue-name">July 2025</span><span class="issue-tag">The website launches</span></li>
-      <li><span class="issue-name">June 2025</span><span class="issue-tag">Recap: Moss Park &amp; Jetty Park</span></li>
-    </ul>
   </div>
 </section>
 """ + footer()
