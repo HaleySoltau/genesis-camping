@@ -183,7 +183,10 @@
       "note": "This one isn't a shared group campsite — camp, book a hotel, or make it a day trip, whatever works for you. Sign up so we know how many to expect at Portillo's Saturday night.",
       "secondary_label": "RV Show Info",
       "secondary_url": "https://www.facebook.com/events/1378783476810932/1378783496810930/?active_tab=about",
-      "photo": null
+      "photo": "assets/images/trips/rv-supershow.jpg",
+      "gallery": [
+        {"src": "assets/images/trips/rv-supershow-promo.jpg", "alt": "2027 Florida RV SuperShow event graphic, January 15-17 at the Florida State Fairgrounds"}
+      ]
     }
   ]
 }
