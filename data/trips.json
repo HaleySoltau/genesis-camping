@@ -74,6 +74,56 @@
       "reserve_url": "https://genesis-camping.square.site/shop/camping-at-jetty-park-512026/QT3SNTDA7LQMVIZI7SPTU5EA",
       "note": "Booked through our group's Square page. Once you've reserved, let us know your site or cabin number so we can add you to the group camping map.",
       "photo": null
+    },
+    {
+      "slug": "jetty-park-2027",
+      "name": "Jetty Park",
+      "date_iso": "2027-04-30",
+      "date_display": "Apr 30–May 2, 2027",
+      "eyebrow": "Group Trip · April 30–May 2, 2027 · Beach Baptism Weekend",
+      "card_teaser": "Beach Baptism weekend, now a full weekend at the beach with cruise ship views. Air-conditioned cabins are still available — but this one books out fast.",
+      "intro": "Beach Baptism weekend doesn't have to just be a day. Enjoy a full weekend at the beach with views of the cruise ships. There are even still cabins available, complete with beds and AC!",
+      "body_paragraphs": [
+        "Jetty Park is a wildly popular campground right on the beach in Port Canaveral — a perfect place to enjoy the sand, fish off the pier, surf some waves, and watch the cruise ships head out.",
+        "This is our biggest group trip of the year, timed around Beach Baptism weekend. Jetty Park does book out far in advance, so if you want to join us, don't wait too long to reserve your spot.",
+        "Book through the link below, then let us know which site or cabin you picked so we can add you to the group camping map."
+      ],
+      "facts": [
+        ["Location", "Port Canaveral, FL"],
+        ["Dates", "Apr 30–May 2, 2027"],
+        ["Sites", "Beachfront sites &amp; A/C cabins"],
+        ["Good for", "Fishing, surfing, cruise-ship watching"],
+        ["Book early", "This one books out fast"]
+      ],
+      "reserve_label": "Book your spot",
+      "reserve_url": "https://genesis-camping.square.site/shop/camping-at-jetty-park-512026/QT3SNTDA7LQMVIZI7SPTU5EA",
+      "note": "Booked through our group's Square page. Once you've reserved, let us know your site or cabin number so we can add you to the group camping map.",
+      "photo": null
+    },
+    {
+      "slug": "lake-louisa",
+      "name": "Lake Louisa State Park",
+      "date_iso": "2026-10-09",
+      "date_display": "Oct 9–12, 2026",
+      "eyebrow": "Group Trip · October 9–12, 2026",
+      "card_teaser": "Trade the ocean for spring-fed lakes at this sprawling state park in the Clermont hills — kayaking, miles of trails, and cabins or glamping tents if you'd rather skip the tent.",
+      "intro": "Trade the ocean for spring-fed lakes at this sprawling state park in the Clermont hills — kayaking, miles of trails, and cabins or glamping tents if you'd rather skip the tent.",
+      "body_paragraphs": [
+        "Lake Louisa State Park trades salt water for spring-fed lakes — three of them, tucked into the rolling citrus-country hills of Clermont. It's a different kind of camping weekend: quieter water, longer trails, and a campground built for settling in rather than rushing around.",
+        "The park sits about 45 minutes southwest of Orlando, between Lake Louisa, Lake Hammond, and Lake Dixie. Expect 60 full-facility sites with 30- and 50-amp hookups, plus cabins and a few glamping-style bell tents if you'd rather skip the tent setup. Bring a kayak or paddleboard — the lakes are made for it — or walk the seven miles of paved road and twenty miles of trail.",
+        "As always, you'll need to book your own site directly through Florida State Parks. Once you've got your reservation, let us know which site (or cabin) you picked so we can add you to the group camping map — that's how the rest of the group finds you once you're there."
+      ],
+      "facts": [
+        ["Location", "7305 US Hwy 27, Clermont, FL 34714"],
+        ["Dates", "Oct 9–12, 2026"],
+        ["Sites", "60 full-facility sites &middot; 30/50-amp hookups"],
+        ["Amenities", "3 lakes, kayaking, cabins &amp; glamping, 20 mi of trails"],
+        ["Reservations", "Online, or call 800-326-3521"]
+      ],
+      "reserve_label": "Reserve your site",
+      "reserve_url": "https://reserve.floridastateparks.org/Web/#!park/39",
+      "note": "Reservations go through Florida State Parks, not through our group. Book your own site, then share your site number with the group.",
+      "photo": null
     }
   ]
 }
