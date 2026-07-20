@@ -100,6 +100,7 @@
       "facts": [
         ["Location", "Port Canaveral, FL"],
         ["Dates", "Apr 30–May 2, 2027"],
+        ["Host Site", "Site 235"],
         ["Sites", "Plenty of standard sites &amp; A/C cabins"],
         ["Good for", "Fishing, surfing, cruise-ship watching"],
         ["Tents", "Dome tents only — high winds have taken down rigid frames"],
@@ -132,6 +133,7 @@
       "facts": [
         ["Location", "7305 US Hwy 27, Clermont, FL 34714"],
         ["Dates", "Oct 9–12, 2026"],
+        ["Host Site", "Loop B &middot; Site 026"],
         ["Sites", "60 full-facility sites &middot; 30/50-amp hookups"],
         ["Amenities", "3 lakes, kayaking, cabins &amp; glamping, 20 mi of trails"],
         ["Reservations", "Online, or call 800-326-3521"]
