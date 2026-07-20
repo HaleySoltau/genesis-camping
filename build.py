@@ -211,6 +211,9 @@ section{padding:88px 0;}
 .trip-card .trip-body{padding:22px 24px;}
 .trip-card h3{font-size:1.3rem;}
 .trip-card p{color:var(--ink-soft); margin:10px 0 16px; font-size:0.95rem;}
+.event-badge{display:inline-flex; align-items:center; gap:6px; background:var(--blue); color:var(--ink); font-family:'JetBrains Mono', monospace; font-size:0.7rem; font-weight:600; text-transform:uppercase; letter-spacing:0.04em; padding:5px 12px; border-radius:20px;}
+.trip-body .event-badge{margin-bottom:12px;}
+.hero-copy .event-badge{margin-bottom:14px;}
 .trip-card a.detail-link{font-family:'JetBrains Mono', monospace; font-size:0.76rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--blue-deep); text-decoration:none; font-weight:500;}
 .trip-card a.detail-link:hover{text-decoration:underline;}
 
@@ -351,6 +354,7 @@ def trip_card_html(t):
         media = f'<img class="photo" src="{t["photo"]}" alt="{t["name"]}">'
     else:
         media = f'<div class="photo-slot">PHOTO: {t["name"]}</div>'
+    badge = f'<span class="event-badge">&starf; {t["special_event"]}</span>' if t.get("special_event") else ""
     return f"""
       <div class="trip">
         <div class="trip-marker"></div>
@@ -358,6 +362,7 @@ def trip_card_html(t):
         <div class="trip-card">
           <div class="trip-photo">{media}</div>
           <div class="trip-body">
+            {badge}
             <h3>{t['name']}</h3>
             <p>{t['card_teaser']}</p>
             <a class="detail-link" href="trips/{t['slug']}.html">Get the details &rarr;</a>
@@ -519,6 +524,7 @@ function galleryStep(id, dir) {{
     fact_rows = "\n        ".join(
         f'<li><span class="k">{k}</span><span class="v">{v}</span></li>' for k, v in t["facts"]
     )
+    badge = f'<span class="event-badge">&starf; {t["special_event"]}</span>' if t.get("special_event") else ""
     html = head(f"{t['name']} — Genesis Family Camping", depth=1) + nav(depth=1) + f"""
 <header class="hero">
   <div class="trip-hero-media">
@@ -526,6 +532,7 @@ function galleryStep(id, dir) {{
     <div class="crumb"><div class="wrap"><a href="../index.html#trips">&larr; Back to all trips</a></div></div>
     <div class="hero-copy" style="max-width:1080px; margin:0 auto;">
       <p class="eyebrow">{t['eyebrow']}</p>
+      {badge}
       <h1 style="font-size:clamp(2.2rem, 5vw, 3.4rem);">{t['name']}</h1>
       <p class="lede">{t['intro']}</p>
       <div class="hero-cta">
