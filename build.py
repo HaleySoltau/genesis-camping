@@ -254,15 +254,15 @@ def footer(depth=0):
       <div>
         <h4>Get Involved</h4>
         <ul>
-          <li><a href="https://forms.gle/m2KCsUUN74c58sTM6">Ideas &amp; Suggestions</a></li>
-          <li><a href="https://forms.gle/ni3sjWrQRgKLFWsHA">Share Your Own Trip</a></li>
-          <li><a href="https://genesischurchorlando.churchcenter.com/groups/adult-groups/family-camping">Join the Group</a></li>
+          <li><a href="https://forms.gle/m2KCsUUN74c58sTM6" target="_blank" rel="noopener noreferrer">Ideas &amp; Suggestions</a></li>
+          <li><a href="https://forms.gle/ni3sjWrQRgKLFWsHA" target="_blank" rel="noopener noreferrer">Share Your Own Trip</a></li>
+          <li><a href="https://genesischurchorlando.churchcenter.com/groups/adult-groups/family-camping" target="_blank" rel="noopener noreferrer">Join the Group</a></li>
         </ul>
       </div>
       <div>
         <h4>Explore</h4>
         <ul>
-          <li><a href="https://genesis-camping.square.site/">Book a Trip (Shop)</a></li>
+          <li><a href="https://genesis-camping.square.site/" target="_blank" rel="noopener noreferrer">Book a Trip (Shop)</a></li>
           <li><a href="{prefix}index.html#trips">Group Trips</a></li>
           <li><a href="{prefix}index.html#chronicles">Campfire Chronicles</a></li>
         </ul>
@@ -315,7 +315,7 @@ def build_index():
       <p class="lede">A group for anyone who wants to camp &mdash; solo campers, families of five with two dogs and a parrot, first-timers, and lifers. No sermons required, just good company and God's creation.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#trips">See upcoming trips</a>
-        <a class="btn btn-ghost" href="https://genesischurchorlando.churchcenter.com/groups/adult-groups/family-camping">Join the group</a>
+        <a class="btn btn-ghost" href="https://genesischurchorlando.churchcenter.com/groups/adult-groups/family-camping" target="_blank" rel="noopener noreferrer">Join the group</a>
       </div>
     </div>
   </div>
@@ -369,19 +369,19 @@ def build_index():
         <p class="eyebrow">Browse</p>
         <h3>Upcoming individual trips</h3>
         <p>See what fellow campers already have booked, and find out how to join them.</p>
-        <a class="btn btn-primary" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3CcSuv5lb9NlyxqQLfoCaz0OwNPtjZW8VwN6ZPobMOcGuw6vDpksIfjVOZIMbCPS77aehIfUQEnmm/pubhtml?gid=744332280&single=true">View trips</a>
+        <a class="btn btn-primary" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3CcSuv5lb9NlyxqQLfoCaz0OwNPtjZW8VwN6ZPobMOcGuw6vDpksIfjVOZIMbCPS77aehIfUQEnmm/pubhtml?gid=744332280&single=true" target="_blank" rel="noopener noreferrer">View trips</a>
       </div>
       <div class="ind-card">
         <p class="eyebrow">Contribute</p>
         <h3>Share your own trip</h3>
         <p>Got a trip booked already? Let the group know so others can tag along or send well-wishes.</p>
-        <a class="btn btn-primary" href="https://forms.gle/ni3sjWrQRgKLFWsHA">Share a trip</a>
+        <a class="btn btn-primary" href="https://forms.gle/ni3sjWrQRgKLFWsHA" target="_blank" rel="noopener noreferrer">Share a trip</a>
       </div>
       <div class="ind-card">
         <p class="eyebrow">Suggest</p>
         <h3>Ideas &amp; suggestions</h3>
         <p>Found a hidden-gem campground or a great day trip idea? Your recommendations shape what we plan next.</p>
-        <a class="btn btn-primary" href="https://forms.gle/m2KCsUUN74c58sTM6">Submit an idea</a>
+        <a class="btn btn-primary" href="https://forms.gle/m2KCsUUN74c58sTM6" target="_blank" rel="noopener noreferrer">Submit an idea</a>
       </div>
     </div>
   </div>
@@ -474,8 +474,8 @@ function galleryStep(id, dir) {{
       <h1 style="font-size:clamp(2.2rem, 5vw, 3.4rem);">{t['name']}</h1>
       <p class="lede">{t['intro']}</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="{t['reserve_url']}">{t['reserve_label']}</a>
-        <a class="btn btn-ghost" href="{site_number_form_url(t)}">Share your site number</a>
+        <a class="btn btn-primary" href="{t['reserve_url']}" target="_blank" rel="noopener noreferrer">{t['reserve_label']}</a>
+        <a class="btn btn-ghost" href="{site_number_form_url(t)}" target="_blank" rel="noopener noreferrer">Share your site number</a>
       </div>
     </div>
   </div>
@@ -493,7 +493,7 @@ function galleryStep(id, dir) {{
       <ul class="fact-list">
         {fact_rows}
       </ul>
-      <a class="btn btn-primary" style="width:100%; text-align:center;" href="{t['reserve_url']}">{t['reserve_label']}</a>
+      <a class="btn btn-primary" style="width:100%; text-align:center;" href="{t['reserve_url']}" target="_blank" rel="noopener noreferrer">{t['reserve_label']}</a>
       <div class="note-box">{t['note']}</div>
     </div>
   </div>
