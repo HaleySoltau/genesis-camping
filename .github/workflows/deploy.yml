@@ -40,7 +40,7 @@ jobs:
       - name: Prepare deploy folder (site files only)
         run: |
           mkdir -p _site
-          cp -r index.html trips assets _site/
+          cp -r index.html trips assets CNAME _site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
