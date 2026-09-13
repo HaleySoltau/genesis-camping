@@ -200,23 +200,28 @@
       "date_iso": "2026-12-04",
       "date_display": "Dec 4–7, 2026",
       "eyebrow": "Group Trip · December 4–7, 2026",
-      "card_teaser": "A large campground with lots going on — an arts &amp; crafts fair, hiking trails, disc golf, and only 15 minutes from the beach. The hardest part is deciding what to do first.",
-      "intro": "A large campground with lots going on — an arts &amp; crafts fair, hiking trails, disc golf, and only 15 minutes from the beach. The hardest part is deciding what to do first.",
+      "special_event": "Space Coast Holiday Food Fest &amp; Craft Fair — Sat, Dec 5",
+      "card_teaser": "A large campground with lots going on — right in the middle of our stay, the park hosts the Space Coast Holiday Food Fest &amp; Craft Fair. Add hiking trails, disc golf, and a beach only 15 minutes away, and the hardest part is deciding what to do first.",
+      "intro": "A large campground with lots going on — right in the middle of our stay, the park hosts the Space Coast Holiday Food Fest &amp; Craft Fair. Add hiking trails, disc golf, and a beach only 15 minutes away, and the hardest part is deciding what to do first.",
       "body_paragraphs": [
         "Sometimes you want the beach, other times you want a festival — why not both? Wickham Park puts you close to Melbourne's beaches while the park itself keeps you busy with its own art and crafts fair, hiking trails, and disc golf course.",
         "This 391-acre Brevard County park offers full-hookup campsites, fishing lakes, an archery range, and a dog park, all on flat, easy terrain that's simple to navigate with the whole family.",
-        "You'll book your own site directly with Brevard County, then let us know which site you picked so we can add you to the group camping map."
+        "This trip lines up with the 3rd Annual Space Coast Holiday Food Fest &amp; Craft Fair, happening right there in the park on Saturday, December 5th from 12–9pm. Expect a craft fair marketplace, a $1–$5 a la carte tasting menu, a kid zone with bounce houses and train rides, axe throwing, holiday movie projections, and visits from Santa and the Grinch — with proceeds benefiting The Children's Hunger Project. It's a separate ticket from your campsite, so grab one below if you want in.",
+        "You'll book your own campsite directly with Brevard County, then let us know which site you picked so we can add you to the group camping map."
       ],
       "facts": [
         ["Location", "2500 Parkway Dr, Melbourne, FL"],
         ["Dates", "Dec 4–7, 2026"],
         ["Sites", "133 full hookup sites"],
         ["Amenities", "Disc golf, archery, fishing lakes, dog park"],
-        ["Beach", "~15 min to the Atlantic coast"]
+        ["Beach", "~15 min to the Atlantic coast"],
+        ["Bonus Event", "Space Coast Holiday Food Fest &amp; Craft Fair, Sat Dec 5, 12–9pm (separate ticket)"]
       ],
       "reserve_label": "Reserve your site",
       "reserve_url": "https://www.brevardfl.gov/ParksAndRecreation/Campgrounds/WickhamCampground",
       "note": "Reservations go through Brevard County Parks &amp; Recreation, not through our group. Book your own site, then share your site number with the group.",
+      "secondary_label": "Get Food Fest &amp; Craft Fair Tickets",
+      "secondary_url": "https://www.eventbrite.com/e/3rd-annual-space-coast-holiday-food-fest-craft-fair-2026-tickets-1992595270092",
       "photo": "assets/images/trips/wickham-park.jpg",
       "gallery": [
         {"src": "assets/images/trips/wickham-park-trail.jpg", "alt": "A hiking trail at Wickham Park"},
