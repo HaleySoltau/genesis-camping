@@ -187,6 +187,31 @@
       "gallery": [
         {"src": "assets/images/trips/rv-supershow-promo.jpg", "alt": "2027 Florida RV SuperShow event graphic, January 15-17 at the Florida State Fairgrounds"}
       ]
+    },
+    {
+      "slug": "wickham-park-2027",
+      "name": "Wickham Park",
+      "date_iso": "2027-12-04",
+      "date_display": "Dec 4–7, 2027",
+      "eyebrow": "Group Trip · December 4–7, 2027",
+      "card_teaser": "A large campground with lots going on — an arts &amp; crafts fair, hiking trails, disc golf, and only 15 minutes from the beach. The hardest part is deciding what to do first.",
+      "intro": "A large campground with lots going on — an arts &amp; crafts fair, hiking trails, disc golf, and only 15 minutes from the beach. The hardest part is deciding what to do first.",
+      "body_paragraphs": [
+        "Sometimes you want the beach, other times you want a festival — why not both? Wickham Park puts you close to Melbourne's beaches while the park itself keeps you busy with its own art and crafts fair, hiking trails, and disc golf course.",
+        "This 391-acre Brevard County park offers full-hookup campsites, fishing lakes, an archery range, and a dog park, all on flat, easy terrain that's simple to navigate with the whole family.",
+        "You'll book your own site directly with Brevard County, then let us know which site you picked so we can add you to the group camping map."
+      ],
+      "facts": [
+        ["Location", "2500 Parkway Dr, Melbourne, FL"],
+        ["Dates", "Dec 4–7, 2027"],
+        ["Sites", "133 full hookup sites"],
+        ["Amenities", "Disc golf, archery, fishing lakes, dog park"],
+        ["Beach", "~15 min to the Atlantic coast"]
+      ],
+      "reserve_label": "Reserve your site",
+      "reserve_url": "https://www.brevardfl.gov/ParksAndRecreation/Campgrounds/WickhamCampground",
+      "note": "Reservations go through Brevard County Parks &amp; Recreation, not through our group. Book your own site, then share your site number with the group.",
+      "photo": null
     }
   ]
 }
