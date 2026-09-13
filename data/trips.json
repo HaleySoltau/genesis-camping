@@ -229,6 +229,34 @@
         {"src": "assets/images/trips/wickham-park-workout.jpg", "alt": "Outdoor fitness area at Wickham Park"},
         {"src": "assets/images/trips/wickham-park-campsite.webp", "alt": "A campsite at Wickham Park"}
       ]
+    },
+    {
+      "slug": "moss-park-2027",
+      "name": "Moss Park",
+      "date_iso": "2027-02-12",
+      "date_display": "Feb 12–16, 2027",
+      "eyebrow": "Group Trip · February 12–16, 2027",
+      "special_event": "Tentative — Details Coming Soon",
+      "card_teaser": "Tentative for now — we're hoping to snag Moss Park's large group site so all 6 of our camps/tents can stay together in one spot. Orange County only opens booking 40 days out, so hold the date loosely until we confirm.",
+      "intro": "Tentative for now — we're hoping to snag Moss Park's large group site so all 6 of our camps/tents can stay together in one spot. Orange County only opens booking 40 days out, so hold the date loosely until we confirm.",
+      "body_paragraphs": [
+        "Moss Park sits between Lake Mary Jane and Lake Hart, about 20 minutes from Orlando International Airport. Expect shaded, spacious grounds, a swimming beach, boat ramps for fishing and paddling, hiking trails, and regular visits from deer and sandhill cranes.",
+        "This trip would be a little different from our usual setup: instead of everyone booking separate sites, Moss Park lets us reserve one large group site big enough for 6 camps/tents together — so the whole crew stays side by side instead of spread across the campground.",
+        "The catch is timing. Orange County Parks &amp; Recreation only opens reservations 40 days before arrival, so we can't actually lock in the group site until closer to early January 2027. Consider this a save-the-date for now — more details (and a firm booking) will be posted here as soon as the reservation window opens."
+      ],
+      "facts": [
+        ["Location", "12901 Moss Park Rd, Orlando, FL"],
+        ["Dates", "Feb 12–16, 2027 (tentative)"],
+        ["Site Type", "One large group site &middot; fits 6 camps/tents"],
+        ["Booking Opens", "~40 days out (early Jan 2027)"],
+        ["Status", "Awaiting booking window &mdash; more details coming"]
+      ],
+      "reserve_label": "Moss Park Info",
+      "reserve_url": "https://www.orangecountyfl.net/cultureparks/parks.aspx?m=dtlvw&d=29",
+      "note": "This trip is tentative. Orange County Parks &amp; Recreation only opens reservations 40 days before arrival, so we can't confirm the group site until early January 2027. Check back here for updates.",
+      "secondary_label": "Join the Group for Updates",
+      "secondary_url": "https://genesischurchorlando.churchcenter.com/groups/adult-groups/family-camping",
+      "photo": null
     }
   ]
 }
