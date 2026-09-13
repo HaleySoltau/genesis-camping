@@ -48,7 +48,13 @@
       "reserve_label": "Reserve your site",
       "reserve_url": "https://www.brevardfl.gov/ParksAndRecreation/Campgrounds/WickhamCampground",
       "note": "Reservations go through Brevard County Parks &amp; Recreation, not through our group. Book your own site, then share your site number with the group.",
-      "photo": null
+      "photo": "assets/images/trips/wickham-park.jpg",
+      "gallery": [
+        {"src": "assets/images/trips/wickham-park-trail.jpg", "alt": "A hiking trail at Wickham Park"},
+        {"src": "assets/images/trips/wickham-park-dog-park.jpg", "alt": "The dog park at Wickham Park"},
+        {"src": "assets/images/trips/wickham-park-workout.jpg", "alt": "Outdoor fitness area at Wickham Park"},
+        {"src": "assets/images/trips/wickham-park-campsite.webp", "alt": "A campsite at Wickham Park"}
+      ]
     },
     {
       "slug": "jetty-park",
@@ -211,7 +217,13 @@
       "reserve_label": "Reserve your site",
       "reserve_url": "https://www.brevardfl.gov/ParksAndRecreation/Campgrounds/WickhamCampground",
       "note": "Reservations go through Brevard County Parks &amp; Recreation, not through our group. Book your own site, then share your site number with the group.",
-      "photo": null
+      "photo": "assets/images/trips/wickham-park.jpg",
+      "gallery": [
+        {"src": "assets/images/trips/wickham-park-trail.jpg", "alt": "A hiking trail at Wickham Park"},
+        {"src": "assets/images/trips/wickham-park-dog-park.jpg", "alt": "The dog park at Wickham Park"},
+        {"src": "assets/images/trips/wickham-park-workout.jpg", "alt": "Outdoor fitness area at Wickham Park"},
+        {"src": "assets/images/trips/wickham-park-campsite.webp", "alt": "A campsite at Wickham Park"}
+      ]
     }
   ]
 }
