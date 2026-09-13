@@ -528,9 +528,19 @@ function galleryStep(id, dir) {{
     # Most trips are group campsites, so the second hero button defaults to
     # "share your site number" (pre-filled per trip). A few trips (e.g. an
     # expo with a separate dinner meetup, no shared campsite) override this
-    # with their own secondary_label/secondary_url instead.
-    secondary_label = t.get("secondary_label", "Share your site number")
-    secondary_url = t.get("secondary_url") or site_number_form_url(t)
+    # with their own secondary_label/secondary_url instead. Set
+    # "secondary_label": null explicitly (e.g. a tentative trip with nothing
+    # to link to yet) to drop the second button entirely.
+    if "secondary_label" in t and t["secondary_label"] is None:
+        secondary_label = None
+        secondary_url = None
+    else:
+        secondary_label = t.get("secondary_label", "Share your site number")
+        secondary_url = t.get("secondary_url") or site_number_form_url(t)
+    secondary_button = (
+        f'<a class="btn btn-ghost" href="{secondary_url}" target="_blank" rel="noopener noreferrer">{secondary_label}</a>'
+        if secondary_label else ""
+    )
     html = head(f"{t['name']} — Genesis Family Camping", depth=1) + nav(depth=1) + f"""
 <header class="hero">
   <div class="trip-hero-media">
@@ -543,7 +553,7 @@ function galleryStep(id, dir) {{
       <p class="lede">{t['intro']}</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="{t['reserve_url']}" target="_blank" rel="noopener noreferrer">{t['reserve_label']}</a>
-        <a class="btn btn-ghost" href="{secondary_url}" target="_blank" rel="noopener noreferrer">{secondary_label}</a>
+        {secondary_button}
       </div>
     </div>
   </div>

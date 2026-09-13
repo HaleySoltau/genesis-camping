@@ -237,16 +237,19 @@
       "date_display": "Feb 12–16, 2027",
       "eyebrow": "Group Trip · February 12–16, 2027",
       "special_event": "Tentative — Details Coming Soon",
-      "card_teaser": "Tentative for now — we're hoping to snag Moss Park's large group site so all 6 of our camps/tents can stay together in one spot. Orange County only opens booking 40 days out, so hold the date loosely until we confirm.",
-      "intro": "Tentative for now — we're hoping to snag Moss Park's large group site so all 6 of our camps/tents can stay together in one spot. Orange County only opens booking 40 days out, so hold the date loosely until we confirm.",
+      "card_teaser": "Tentative for now — a 3-day weekend at our local campground, just 15 minutes from church. We're hoping to snag Moss Park's large group site so all 6 of our camps/tents can stay together in one spot.",
+      "intro": "Tentative for now — a 3-day weekend at our local campground, just 15 minutes from church. We're hoping to snag Moss Park's large group site so all 6 of our camps/tents can stay together in one spot.",
       "body_paragraphs": [
-        "Moss Park sits between Lake Mary Jane and Lake Hart, about 20 minutes from Orlando International Airport. Expect shaded, spacious grounds, a swimming beach, boat ramps for fishing and paddling, hiking trails, and regular visits from deer and sandhill cranes.",
-        "This trip would be a little different from our usual setup: instead of everyone booking separate sites, Moss Park lets us reserve one large group site big enough for 6 camps/tents together — so the whole crew stays side by side instead of spread across the campground.",
+        "Moss Park is our local campground — just 15 minutes from church, sitting between Lake Mary Jane and Lake Hart about 20 minutes from Orlando International Airport. Expect shaded, spacious grounds, a swimming beach, boat ramps for fishing and paddling, hiking trails, and regular visits from deer and sandhill cranes.",
+        "Being so close to home makes this a great, low-pressure pick for anyone new to camping — no long drive, no big commitment, just an easy trial run for the group. It lands over a 3-day weekend, so there's time to actually settle in rather than just passing through.",
+        "This trip would also be a little different from our usual setup: instead of everyone booking separate sites, Moss Park lets us reserve one large group site big enough for 6 camps/tents together — so the whole crew stays side by side instead of spread across the campground.",
         "The catch is timing. Orange County Parks &amp; Recreation only opens reservations 40 days before arrival, so we can't actually lock in the group site until closer to early January 2027. Consider this a save-the-date for now — more details (and a firm booking) will be posted here as soon as the reservation window opens."
       ],
       "facts": [
         ["Location", "12901 Moss Park Rd, Orlando, FL"],
-        ["Dates", "Feb 12–16, 2027 (tentative)"],
+        ["Dates", "Feb 12–16, 2027 (tentative) &middot; 3-day weekend"],
+        ["Distance", "~15 min from church &mdash; our local campground"],
+        ["Good for", "Beginners &mdash; low-pressure, close-to-home trial run"],
         ["Site Type", "One large group site &middot; fits 6 camps/tents"],
         ["Booking Opens", "~40 days out (early Jan 2027)"],
         ["Status", "Awaiting booking window &mdash; more details coming"]
@@ -254,9 +257,13 @@
       "reserve_label": "Moss Park Info",
       "reserve_url": "https://www.orangecountyfl.net/cultureparks/parks.aspx?m=dtlvw&d=29",
       "note": "This trip is tentative. Orange County Parks &amp; Recreation only opens reservations 40 days before arrival, so we can't confirm the group site until early January 2027. Check back here for updates.",
-      "secondary_label": "Join the Group for Updates",
-      "secondary_url": "https://genesischurchorlando.churchcenter.com/groups/adult-groups/family-camping",
-      "photo": null
+      "secondary_label": null,
+      "photo": "assets/images/trips/moss-park.jpg",
+      "gallery": [
+        {"src": "assets/images/trips/moss-park-lake.webp", "alt": "The lake at Moss Park"},
+        {"src": "assets/images/trips/moss-park-trails.jpg", "alt": "A hiking trail at Moss Park"},
+        {"src": "assets/images/trips/moss-park-wildlife.jpg", "alt": "Wildlife spotted at Moss Park"}
+      ]
     }
   ]
 }
