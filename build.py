@@ -497,11 +497,7 @@ def build_leaving_page():
       Our merch is printed, shipped, and sold by our print partner, Printful, on their own site &mdash;
       not ours. Clicking below will take you to gcocamping.printful.me in a new tab.
     </p>
-    <div class="note-box" style="margin:22px 0 30px;">
-      This is merch only &mdash; trip camping is never booked through us or through the shop. You always
-      reserve your own site directly with the campground or park, same as always.
-    </div>
-    <div class="hero-cta" style="margin-top:0;">
+    <div class="hero-cta" style="margin-top:26px;">
       <a class="btn btn-primary" href="{PRINTFUL_SHOP_URL}" target="_blank" rel="noopener noreferrer">Continue to Shop</a>
       <a class="btn btn-outline" href="index.html">Go Back</a>
     </div>
