@@ -40,6 +40,12 @@ def trip_date(t):
 # campgrounds/dates in the form itself as trips come and go.
 SITE_NUMBER_FORM_BASE = "https://docs.google.com/forms/d/e/1FAIpQLScO-IwJJcCW-6ps4arHLOlv9MJyRjvOB0EC6-eQ6Uaz7QHNUA/viewform"
 
+# Merch shop lives on Printful, not on this site — "Merch" (nav) and
+# "Merch Shop" (footer) both route through leaving.html first rather than
+# linking here directly, so visitors get a clear heads-up before being sent
+# off gcocamping.com.
+PRINTFUL_SHOP_URL = "https://gcocamping.printful.me/"
+
 def site_number_form_url(t):
     params = {
         "usp": "pp_url",
@@ -175,6 +181,8 @@ nav{position:sticky; top:0; z-index:50; background:rgba(255,255,255,0.92); backd
 .btn-primary:hover{background:var(--blue-deep); color:#fff; transform:translateY(-1px);}
 .btn-ghost{border-color:#fff; color:#fff;}
 .btn-ghost:hover{background:#fff; color:var(--ink);}
+.btn-outline{border-color:var(--ink); color:var(--ink);}
+.btn-outline:hover{background:var(--ink); color:#fff;}
 
 section{padding:88px 0;}
 .section-head{max-width:620px; margin-bottom:52px;}
@@ -302,9 +310,7 @@ def nav(depth=0):
       <li><a href="{prefix}index.html#hosts">About</a></li>
       <li><a href="{prefix}index.html#trips">Group Trips</a></li>
       <li><a href="{prefix}index.html#individual">Individual Trips</a></li>
-      <!-- Merch link hidden while Square/Printful pricing is sorted out — see printful-square-pricer project.
-      <li><a href="https://genesis-camping.square.site/" target="_blank" rel="noopener noreferrer">Merch</a></li>
-      -->
+      <li><a href="{prefix}leaving.html">Merch</a></li>
       <li><a href="{prefix}index.html#links">Links</a></li>
     </ul>
   </div>
@@ -336,9 +342,7 @@ def footer(depth=0):
       <div>
         <h4>Explore</h4>
         <ul>
-          <!-- Shop link hidden while Square/Printful pricing is sorted out — see printful-square-pricer project.
-          <li><a href="https://genesis-camping.square.site/" target="_blank" rel="noopener noreferrer">Book a Trip (Shop)</a></li>
-          -->
+          <li><a href="{prefix}leaving.html">Merch Shop</a></li>
           <li><a href="{prefix}index.html#trips">Group Trips</a></li>
         </ul>
       </div>
@@ -480,6 +484,36 @@ def build_index():
     print("wrote index.html")
 
 
+def build_leaving_page():
+    # Interstitial shown before sending visitors off to the Printful shop —
+    # both the "Merch" nav link and the footer's "Merch Shop" link route
+    # through here instead of linking to Printful directly.
+    html = head("Leaving Genesis Family Camping — Merch Shop") + nav() + f"""
+<section>
+  <div class="wrap" style="max-width:640px;">
+    <p class="eyebrow" style="margin-bottom:10px;">Heads up</p>
+    <h1 style="font-size:clamp(1.8rem, 4vw, 2.6rem); margin-bottom:18px;">You're leaving Genesis Family Camping</h1>
+    <p style="color:var(--ink-soft); font-size:1.02rem; line-height:1.6;">
+      Our merch is printed, shipped, and sold by our print partner, Printful, on their own site &mdash;
+      not ours. Clicking below will take you to gcocamping.printful.me in a new tab.
+    </p>
+    <div class="note-box" style="margin:22px 0 30px;">
+      This is merch only &mdash; trip camping is never booked through us or through the shop. You always
+      reserve your own site directly with the campground or park, same as always.
+    </div>
+    <div class="hero-cta" style="margin-top:0;">
+      <a class="btn btn-primary" href="{PRINTFUL_SHOP_URL}" target="_blank" rel="noopener noreferrer">Continue to Shop</a>
+      <a class="btn btn-outline" href="index.html">Go Back</a>
+    </div>
+  </div>
+</section>
+""" + footer()
+
+    with open(os.path.join(ROOT, "leaving.html"), "w") as f:
+        f.write(html)
+    print("wrote leaving.html")
+
+
 def build_trip_page(t):
     if t.get("photo"):
         media = f'<img class="photo" src="../{t["photo"]}" alt="{t["name"]}" style="position:absolute; inset:0;">'
@@ -591,6 +625,7 @@ function galleryStep(id, dir) {{
 
 if __name__ == "__main__":
     build_index()
+    build_leaving_page()
     for trip in TRIPS:
         build_trip_page(trip)
-    print(f"\nDone. Built index.html + {len(TRIPS)} trip pages from data/trips.json.")
+    print(f"\nDone. Built index.html + leaving.html + {len(TRIPS)} trip pages from data/trips.json.")
