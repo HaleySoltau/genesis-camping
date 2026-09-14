@@ -214,14 +214,16 @@
       "facts": [
         ["Location", "2500 Parkway Dr, Melbourne, FL"],
         ["Dates", "Dec 4–7, 2026"],
+        ["Host Site", "Site B076"],
         ["Sites", "133 full hookup sites"],
         ["Amenities", "Disc golf, archery, fishing lakes, dog park"],
         ["Beach", "~15 min to the Atlantic coast"],
-        ["Bonus Event", "Space Coast Holiday Food Fest &amp; Craft Fair, Sat Dec 5, 12–9pm (separate ticket)"]
+        ["Bonus Event", "Space Coast Holiday Food Fest &amp; Craft Fair, Sat Dec 5, 12–9pm (separate ticket)"],
+        ["Notice", "Loop A bathrooms closed for renovation"]
       ],
       "reserve_label": "Reserve your site",
       "reserve_url": "https://www.brevardfl.gov/ParksAndRecreation/Campgrounds/WickhamCampground",
-      "note": "Reservations go through Brevard County Parks &amp; Recreation, not through our group. Book your own site, then share your site number with the group.",
+      "note": "Reservations go through Brevard County Parks &amp; Recreation, not through our group. Book your own site, then share your site number with the group. Heads up: the bathrooms in Loop A are currently closed for renovation.",
       "secondary_label": "Get Food Fest &amp; Craft Fair Tickets",
       "secondary_url": "https://www.eventbrite.com/e/3rd-annual-space-coast-holiday-food-fest-craft-fair-2026-tickets-1992595270092",
       "photo": "assets/images/trips/wickham-park.jpg",
