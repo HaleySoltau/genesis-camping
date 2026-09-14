@@ -135,24 +135,25 @@
       "date_iso": "2026-10-09",
       "date_display": "Oct 9–12, 2026",
       "eyebrow": "Group Trip · October 9–12, 2026",
-      "card_teaser": "Trade the ocean for spring-fed lakes at this sprawling state park in the Clermont hills — kayaking, miles of trails, and cabins or glamping tents if you'd rather skip the tent.",
-      "intro": "Trade the ocean for spring-fed lakes at this sprawling state park in the Clermont hills — kayaking, miles of trails, and cabins or glamping tents if you'd rather skip the tent.",
+      "special_event": "Sites Fully Booked — Day Visitors Welcome",
+      "card_teaser": "Trade the ocean for spring-fed lakes at this sprawling state park in the Clermont hills. Camping sites are fully booked for this one, but the park itself is open to visit for the day.",
+      "intro": "Trade the ocean for spring-fed lakes at this sprawling state park in the Clermont hills. Camping sites are fully booked for this one, but the park itself is open to visit for the day.",
       "body_paragraphs": [
         "Lake Louisa State Park trades salt water for spring-fed lakes — three of them, tucked into the rolling citrus-country hills of Clermont. It's a different kind of camping weekend: quieter water, longer trails, and a campground built for settling in rather than rushing around.",
         "The park sits about 45 minutes southwest of Orlando, between Lake Louisa, Lake Hammond, and Lake Dixie. Expect 60 full-facility sites with 30- and 50-amp hookups, plus cabins and a few glamping-style bell tents if you'd rather skip the tent setup. Bring a kayak or paddleboard — the lakes are made for it — or walk the seven miles of paved road and twenty miles of trail.",
-        "As always, you'll need to book your own site directly through Florida State Parks. Once you've got your reservation, let us know which site (or cabin) you picked so we can add you to the group camping map — that's how the rest of the group finds you once you're there."
+        "Camping sites for this trip are completely booked — there's nothing left to reserve for the group. The park is still open to the public for the day, though: come out and join us for a few hours of kayaking, swimming, or trail time, even if you're not staying overnight."
       ],
       "facts": [
         ["Location", "7305 US Hwy 27, Clermont, FL 34714"],
         ["Dates", "Oct 9–12, 2026"],
         ["Host Site", "Loop B &middot; Site 026"],
-        ["Sites", "60 full-facility sites &middot; 30/50-amp hookups"],
-        ["Amenities", "3 lakes, kayaking, cabins &amp; glamping, 20 mi of trails"],
-        ["Reservations", "Online, or call 800-326-3521"]
+        ["Camping", "Fully booked &mdash; no sites available"],
+        ["Day Visits", "Welcome &middot; $5 per vehicle &middot; 8am&ndash;sunset"],
+        ["Amenities", "3 lakes, kayaking, cabins &amp; glamping, 20 mi of trails"]
       ],
-      "reserve_label": "Reserve your site",
-      "reserve_url": "https://reserve.floridastateparks.org/Web/#!park/39",
-      "note": "Reservations go through Florida State Parks, not through our group. Book your own site, then share your site number with the group.",
+      "reserve_label": "Day-Use Park Info",
+      "reserve_url": "https://www.floridastateparks.org/parks-and-trails/lake-louisa-state-park/",
+      "note": "Camping sites are fully booked for this trip. The park remains open to day visitors for $5 per vehicle, 8am to sunset — no reservation needed to stop by for the day.",
       "photo": "assets/images/trips/lake-louisa.jpg",
       "gallery": [
         {"src": "assets/images/trips/lake-louisa-trail.jpg", "alt": "A shaded trail through the pines at Lake Louisa State Park"},
