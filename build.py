@@ -136,6 +136,7 @@ def individual_trip_card_html(trip):
 STYLE = """
 :root{
   --blue:#2bc3f7; --blue-deep:#0b9cd1; --blue-pale:#e7f8ff;
+  --orange:#f7942b; --orange-deep:#d1760f;
   --ink:#1a1a1a; --ink-soft:#4a4a4a; --paper:#ffffff; --paper-2:#f4f8fa;
   --line:rgba(26,26,26,0.1);
 }
@@ -220,6 +221,7 @@ section{padding:88px 0;}
 .trip-card h3{font-size:1.3rem;}
 .trip-card p{color:var(--ink-soft); margin:10px 0 16px; font-size:0.95rem;}
 .event-badge{display:inline-flex; align-items:center; gap:6px; background:var(--blue); color:var(--ink); font-family:'JetBrains Mono', monospace; font-size:0.7rem; font-weight:600; text-transform:uppercase; letter-spacing:0.04em; padding:5px 12px; border-radius:20px;}
+.event-badge.status-alert{background:var(--orange);}
 .trip-body .event-badge{margin-bottom:12px;}
 .hero-copy .event-badge{margin-bottom:14px;}
 .trip-card a.detail-link{font-family:'JetBrains Mono', monospace; font-size:0.76rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--blue-deep); text-decoration:none; font-weight:500;}
@@ -362,7 +364,11 @@ def trip_card_html(t):
         media = f'<img class="photo" src="{t["photo"]}" alt="{t["name"]}">'
     else:
         media = f'<div class="photo-slot">PHOTO: {t["name"]}</div>'
-    badge = f'<span class="event-badge">&starf; {t["special_event"]}</span>' if t.get("special_event") else ""
+    # "badge_style": "alert" (set per-trip in trips.json) swaps the badge from
+    # the default blue to orange — for a status flag like "fully booked" that
+    # should read as materially different from a normal blue event highlight.
+    badge_class = "event-badge status-alert" if t.get("badge_style") == "alert" else "event-badge"
+    badge = f'<span class="{badge_class}">&starf; {t["special_event"]}</span>' if t.get("special_event") else ""
     return f"""
       <div class="trip">
         <div class="trip-marker"></div>
@@ -558,7 +564,11 @@ function galleryStep(id, dir) {{
     fact_rows = "\n        ".join(
         f'<li><span class="k">{k}</span><span class="v">{v}</span></li>' for k, v in t["facts"]
     )
-    badge = f'<span class="event-badge">&starf; {t["special_event"]}</span>' if t.get("special_event") else ""
+    # "badge_style": "alert" (set per-trip in trips.json) swaps the badge from
+    # the default blue to orange — for a status flag like "fully booked" that
+    # should read as materially different from a normal blue event highlight.
+    badge_class = "event-badge status-alert" if t.get("badge_style") == "alert" else "event-badge"
+    badge = f'<span class="{badge_class}">&starf; {t["special_event"]}</span>' if t.get("special_event") else ""
     # Most trips are group campsites, so the second hero button defaults to
     # "share your site number" (pre-filled per trip). A few trips (e.g. an
     # expo with a separate dinner meetup, no shared campsite) override this
